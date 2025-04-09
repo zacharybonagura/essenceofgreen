@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Zachary Bonagura" />
+    <meta
+      name="description"
+      content="Learn more about our professional landscaping services at Essence of Green Landscape Design & Installation."
+    />
+    <title>Essence of Green - Landscaping Services</title>
+    <link rel="icon" href="img/eog-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/header.js" defer></script>
+    <script src="js/gallery.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__content">
+        <figure>
+          <a href="index.html">
+            <img
+              class="header__logo"
+              src="img/eog-logo-text-white.png"
+              alt="Essence of Green"
+              title="Essence of Green"
+              width="300"
+            />
+          </a>
+          <figcaption class="offscreen">Essence of Green</figcaption>
+        </figure>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
+        <nav class="header__nav" aria-label="primary-navigation">
+          <ul class="header__ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="services__tab">
+              <a href="services.html">Services</a>
+              <ul class="dropdown">
+                <li><a href="landscaping.html">Landscaping</a></li>
+                <li><a href="hardscaping.html">Hardscaping</a></li>
+                <li>
+                  <a href="rooftops-courtyards.html">Rooftops & Courtyards</a>
+                </li>
+                <li><a href="water-features.html">Water Features</a></li>
+                <li><a href="custom-woodwork.html">Custom Woodwork</a></li>
+                <li><a href="drainage.html">Drainage</a></li>
+              </ul>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main class="service-item__main">
+      <section class="service-item__hero-container">
+        <div class="service-item__hero-overlay">
+          <h1>Landscaping</h1>
+          <p>
+            Bring your outdoor vision to life with our professional landscaping
+            services, creating lush and vibrant spaces that elevate the beauty
+            of your property.
+          </p>
+        </div>
+        <img
+          class="service-item__hero-background-image"
+          src="img/LH 51.jpg"
+          alt="Landscaping Background"
+        />
+      </section>
+
+      <section class="service-item__services-info">
+        <h2 class="service-item__subtitle">What We Offer</h2>
+        <ul class="service-item__services-list">
+          <li class="service-item__service-item">
+            Custom landscape design and installation
+          </li>
+          <li class="service-item__service-item">
+            Tree, shrub and flower bed planting
+          </li>
+          <li class="service-item__service-item">Sod and turf installation</li>
+          <li class="service-item__service-item">
+            Pathway, border, and edging designs
+          </li>
+          <li class="service-item__service-item">Landscape lighting</li>
+          <li class="service-item__service-item">Irrigation systems</li>
+        </ul>
+      </section>
+
+      <section class="service-item__gallery" id="landscape-gallery">
+        <h2 class="service-item__subtitle">Landscape Gallery</h2>
+        <div
+          class="service-item__gallery-grid"
+          id="landscape-gallery-grid"
+        ></div>
+        <div id="landscape-gallery-modal" class="service-item__modal">
+          <span
+            class="service-item__close"
+            onclick="closeModal('landscape-gallery')"
+            >X</span
+          >
+          <img
+            class="service-item__modal-content"
+            id="landscape-gallery-modalImage"
+          />
+          <button
+            class="service-item__prev"
+            onclick="changeImage(-1, 'landscape-gallery')"
+          >
+            &#10094;
+          </button>
+          <button
+            class="service-item__next"
+            onclick="changeImage(1, 'landscape-gallery')"
+          >
+            &#10095;
+          </button>
+        </div>
+      </section>
+
+      <section class="service-item__cta">
+        <h2 class="service-item__subtitle">
+          Ready to Revamp Your Outdoor Space?
+        </h2>
+        <p class="service-item__text">
+          Contact us today to schedule a consultation and get started!
+        </p>
+        <a href="contact.html" class="service-item__btn">Get In Touch</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-layout">
+        <div class="footer-phone-email">
+          <p>
+            <strong>Phone:</strong> <a href="tel:+8453531666">(845) 353-1666</a>
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:eoglandscape@optonline.net"
+              >eoglandscape@optonline.net</a
+            >
+          </p>
+        </div>
+        <div class="footer-contact-button">
+          <a href="contact.html" class="contact-button"
+            ><strong>Contact Us</strong></a
+          >
+        </div>
+        <div class="footer-po-location">
+          <p>
+            <strong>PO Box:</strong>
+            <a
+              href="https://tools.usps.com/locations/details/1387123?utm_source=google-my-business-url&utm_medium=search&utm_campaign=yext"
+              target="_blank"
+              >362 West Nyack, NY 10994</a
+            >
+          </p>
+          <p><strong>Location:</strong> Tri-State Area (NY, NJ, CT)</p>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>
+          <span class="nowrap">Copyright &copy; <time id="year"></time></span>
+          <span class="nowrap">Essence of Green</span>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

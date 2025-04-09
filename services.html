@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Zachary Bonagura" />
+    <meta
+      name="description"
+      content="This page contains services information at Essence of Green Landscape Design & Installation."
+    />
+    <title>Essence of Green - Services</title>
+    <link rel="icon" href="img/eog-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/header.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__content">
+        <figure>
+          <a href="index.html">
+            <img
+              class="header__logo"
+              src="img/eog-logo-text-white.png"
+              alt="Essence of Green"
+              title="Essence of Green"
+              width="300"
+            />
+          </a>
+          <figcaption class="offscreen">Essence of Green</figcaption>
+        </figure>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
+        <nav class="header__nav" aria-label="primary-navigation">
+          <ul class="header__ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="services__tab">
+              <a href="services.html">Services</a>
+              <ul class="dropdown">
+                <li><a href="landscaping.html">Landscaping</a></li>
+                <li><a href="hardscaping.html">Hardscaping</a></li>
+                <li>
+                  <a href="rooftops-courtyards.html">Rooftops & Courtyards</a>
+                </li>
+                <li><a href="water-features.html">Water Features</a></li>
+                <li><a href="custom-woodwork.html">Custom Woodwork</a></li>
+                <li><a href="drainage.html">Drainage</a></li>
+              </ul>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <section class="services__container">
+        <h1>Our Services</h1>
+        <p>
+          Explore our diverse range of landscaping and design services tailored
+          to meet your needs and bring your vision to life.
+        </p>
+        <div class="services__grid">
+          <a href="landscaping.html" class="services__card">
+            <img src="img/LH 51.jpg" alt="Landscaping" />
+            <h2>Landscaping</h2>
+            <p>Transform your outdoor space into a lush, vibrant landscape.</p>
+          </a>
+          <a href="hardscaping.html" class="services__card">
+            <img src="img/H 48.jpg" alt="Hardscaping" />
+            <h2>Hardscaping</h2>
+            <p>
+              Enhance your home with elegant pavers, stone, and other materials.
+            </p>
+          </a>
+          <a href="rooftops-courtyards.html" class="services__card">
+            <img src="img/LR 17.jpg" alt="Rooftops & Courtyards" />
+            <h2>Rooftops & Courtyards</h2>
+            <p>
+              Create inviting outdoor spaces for relaxation and entertainment.
+            </p>
+          </a>
+          <a href="water-features.html" class="services__card">
+            <img src="img/HA 9.jpg" alt="Water Features" />
+            <h2>Water Features</h2>
+            <p>Add tranquility with ponds, fountains, waterfalls and more.</p>
+          </a>
+          <a href="custom-woodwork.html" class="services__card">
+            <img src="img/O 12.jpg" alt="Custom Woodwork" />
+            <h2>Custom Woodwork</h2>
+            <p>
+              Elevate your outdoor areas with personalized wood installations.
+            </p>
+          </a>
+          <a href="drainage.html" class="services__card">
+            <img src="img/D 14.jpg" alt="Drainage" />
+            <h2>Drainage</h2>
+            <p>Ensure proper water flow and prevent damage to your home.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-layout">
+        <div class="footer-phone-email">
+          <p>
+            <strong>Phone:</strong> <a href="tel:+8453531666">(845) 353-1666</a>
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:eoglandscape@optonline.net"
+              >eoglandscape@optonline.net</a
+            >
+          </p>
+        </div>
+        <div class="footer-contact-button">
+          <a href="contact.html" class="contact-button"
+            ><strong>Contact Us</strong></a
+          >
+        </div>
+        <div class="footer-po-location">
+          <p>
+            <strong>PO Box:</strong>
+            <a
+              href="https://tools.usps.com/locations/details/1387123?utm_source=google-my-business-url&utm_medium=search&utm_campaign=yext"
+              target="_blank"
+              >362 West Nyack, NY 10994</a
+            >
+          </p>
+          <p><strong>Location:</strong> Tri-State Area (NY, NJ, CT)</p>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>
+          <span class="nowrap">Copyright &copy; <time id="year"></time></span>
+          <span class="nowrap">Essence of Green</span>
+        </p>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

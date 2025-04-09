@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Zachary Bonagura" />
+    <meta
+      name="description"
+      content="This page contains contact information for Essence of Green Landscape Design & Installation."
+    />
+    <title>Essence of Green - Contact</title>
+    <link rel="icon" href="img/eog-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/header.js" defer></script>
+  </head>
+
+  <header class="header">
+    <section class="header__content">
+      <figure>
+        <a href="index.html">
+          <img
+            class="header__logo"
+            src="img/eog-logo-text-white.png"
+            alt="Essence of Green"
+            title="Essence of Green"
+            width="300"
+          />
+        </a>
+        <figcaption class="offscreen">Essence of Green</figcaption>
+      </figure>
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
+      <nav class="header__nav" aria-label="primary-navigation">
+        <ul class="header__ul">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="services__tab">
+            <a href="services.html">Services</a>
+            <ul class="dropdown">
+              <li><a href="landscaping.html">Landscaping</a></li>
+              <li><a href="hardscaping.html">Hardscaping</a></li>
+              <li>
+                <a href="rooftops-courtyards.html">Rooftops & Courtyards</a>
+              </li>
+              <li><a href="water-features.html">Water Features</a></li>
+              <li><a href="custom-woodwork.html">Custom Woodwork</a></li>
+              <li><a href="drainage.html">Drainage</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <body>
+    <main class="contact">
+      <section class="contact__intro">
+        <h1>Contact</h1>
+        <p>
+          We’d love to hear from you! Whether you have questions or want to
+          schedule a consultation, feel free to reach out to us.
+        </p>
+      </section>
+
+      <div class="contact__main">
+        <section class="contact__info">
+          <ul>
+            <li class="contact__details">
+              <div
+                class="contact__item contact__phone"
+                data-link="tel:+8453531666"
+              >
+                <h3>Phone</h3>
+                <p><a href="tel:+8453531666">(845) 353-1666</a></p>
+              </div>
+              <div
+                class="contact__item contact__email"
+                data-link="mailto:eoglandscape@optonline.net"
+              >
+                <h3>Email</h3>
+                <p>
+                  <a href="mailto:eoglandscape@optonline.net"
+                    >eoglandscape@optonline.net</a
+                  >
+                </p>
+              </div>
+              <div
+                class="contact__item contact__po"
+                data-link="https://tools.usps.com/locations/details/1387123?utm_source=google-my-business-url&utm_medium=search&utm_campaign=yext"
+              >
+                <h3>PO Box</h3>
+                <p>
+                  <a
+                    href="https://tools.usps.com/locations/details/1387123?utm_source=google-my-business-url&utm_medium=search&utm_campaign=yext"
+                    >362 West Nyack, NY 10994</a
+                  >
+                </p>
+              </div>
+              <div class="contact__item contact__hours">
+                <h3>Business Hours</h3>
+                <p>Monday - Saturday</p>
+                <p>9 AM - 5 PM</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="contact__form">
+          <h2>Send Us a Message</h2>
+          <form
+            action="https://formspree.io/f/mdkovryo"
+            method="POST"
+            class="contact-form"
+          >
+            <label for="name"><h3>Name</h3></label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email"><h3>Email</h3></label>
+            <input type="email" id="email" name="email" required />
+
+            <fieldset>
+              <h3>Services</h3>
+              <div class="checkbox-grid">
+                <label>
+                  <input type="checkbox" name="services" value="Landscaping" />
+                  <span>Landscaping</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="services" value="Hardscaping" />
+                  <span>Hardscaping</span>
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value="Rooftops & Courtyards"
+                  />
+                  <span>Rooftops & Courtyards</span>
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value="Water Features"
+                  />
+                  <span>Water Features</span>
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value="Custom Woodwork"
+                  />
+                  <span>Custom Woodwork</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="services" value="Drainage" />
+                  <span>Drainage</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <label for="other-ideas"><h3>Other Service</h3></label>
+            <input type="other-ideas" id="other-ideas" name="other-ideas" />
+
+            <label for="message"><h3>Message</h3></label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const contactItems = document.querySelectorAll(".contact__info li");
+
+        contactItems.forEach((item) => {
+          const link = item.getAttribute("data-link");
+
+          if (link) {
+            item.addEventListener("mouseover", () => {
+              item.style.cursor = "pointer";
+            });
+
+            item.addEventListener("click", (event) => {
+              if (item.classList.contains("contact__po")) {
+                window.open(link, "_blank");
+              } else {
+                window.location.href = link;
+              }
+            });
+          }
+        });
+      });
+    </script>
+
+    <footer class="footer">
+      <p>
+        <span class="nowrap">Copyright &copy; <time id="year"></time></span>
+        <span class="nowrap">Essence of Green</span>
+      </p>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <style>
+      .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 0.5em;
+      }
+
+      @media (min-width: 600px) {
+        .footer-content {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .footer-copyright {
+          text-align: center;
+        }
+        .footer-copyright {
+          align-self: center;
+        }
+      }
+    </style>
+  </body>
+</html>
