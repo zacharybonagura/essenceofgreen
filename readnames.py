@@ -49,8 +49,6 @@ def convert_and_categorize_files_in_img_folder():
             if 'D' in filename:
                 drainage.append(filename)
 
-    random.shuffle(general_gallery)
-
     # Print categorized results with double quotes
     print("Landscaping:", str(landscaping).replace("'", '"'))
     print("\n")

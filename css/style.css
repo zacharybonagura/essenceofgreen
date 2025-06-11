@@ -111,8 +111,6 @@ body {
   color: var(--FONT-COLOR);
   min-height: 100vh;
   margin: 0 auto;
-  border-left: var(--BORDERS);
-  border-right: var(--BORDERS);
   box-shadow: 0 0 10px var(--BORDER-COLOR);
 }
 
