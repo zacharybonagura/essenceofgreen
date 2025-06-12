@@ -632,6 +632,7 @@ function initGallery(folderPath, galleryId, imageFilenames) {
     imgElement.src = `${folderPath}${filename}`;
     imgElement.alt = `Gallery Image ${index + 1}`;
     imgElement.className = "service-item__gallery-item";
+    imgElement.loading = "lazy";
     imgElement.style.opacity = 0;
     imgElement.style.transition =
       "opacity 0.3s ease-in-out, transform 0.3s ease";
