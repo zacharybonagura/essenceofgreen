@@ -620,7 +620,11 @@ function initGallery(folderPath, galleryId, imageFilenames) {
 
   imageFilenames.forEach((filename, index) => {
     const imgElement = document.createElement("img");
-    imgElement.src = `${folderPath}${filename}`;
+
+    const baseName = filename.substring(0, filename.lastIndexOf("."));
+    const webpSrc = `${folderPath}${baseName}.webp`;
+
+    imgElement.src = webpSrc;
     imgElement.alt = `Gallery Image ${index + 1}`;
     imgElement.className = "service-item__gallery-item";
     imgElement.loading = "lazy";
@@ -628,13 +632,13 @@ function initGallery(folderPath, galleryId, imageFilenames) {
     imgElement.style.transition =
       "opacity 0.3s ease-in-out, transform 0.3s ease";
 
-    // Wait until the image is fully loaded
     imgElement.onload = () => {
       imgElement.style.opacity = 1;
     };
 
+    // Fallback to original image if .webp fails
     imgElement.onerror = () => {
-      console.error(`Error loading image: ${filename}`);
+      imgElement.src = `${folderPath}${filename}`;
     };
 
     imgElement.setAttribute("onclick", `openModal(${index}, '${galleryId}')`);
