@@ -2,10 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
 
-const inputDir = "../img"; // adjust path if needed
-const outputDir = "../img"; // overwrite or change this if you want to export elsewhere
+const inputDir = "../img";
+const outputDir = "../img";
 
-// Supported input extensions
 const validExtensions = [".jpg", ".jpeg", ".png"];
 
 fs.readdirSync(inputDir).forEach((file) => {
@@ -18,7 +17,8 @@ fs.readdirSync(inputDir).forEach((file) => {
   const outputPath = path.join(outputDir, `${baseName}.webp`);
 
   sharp(inputPath)
-    .webp({ quality: 75 }) // adjust quality as needed
+    .rotate()
+    .webp({ quality: 75 })
     .toFile(outputPath)
     .then(() => console.log(`✅ Converted: ${file} → ${baseName}.webp`))
     .catch((err) => console.error(`❌ Error processing ${file}:`, err));
